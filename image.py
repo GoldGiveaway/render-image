@@ -1,11 +1,11 @@
 from PIL import Image, ImageDraw, ImageFont
 
-font = ImageFont.truetype("Inter_24pt-Bold.ttf", 50)
-font2 = ImageFont.truetype("Inter_18pt-SemiBold.ttf", 40)
+font = ImageFont.truetype("files/Inter_24pt-Bold.ttf", 50)
+font2 = ImageFont.truetype("files/Inter_18pt-SemiBold.ttf", 40)
 
 
 def generate_image(users, end, wins, title):
-    image = Image.open("image.jpg")
+    image = Image.open("files/image.jpg")
     drawer = ImageDraw.Draw(image)
     drawer.text(
         (450, 200),

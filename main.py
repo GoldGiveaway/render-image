@@ -2,16 +2,7 @@ from fastapi import FastAPI
 from io import BytesIO
 from image import generate_image
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel
-
-
-class Item(BaseModel):
-    users: int
-    end: str
-    wins: int
-    title: str
 app = FastAPI()
-
 
 @app.get("/generate")
 def generate(users: int, end: str, wins: int, title: str):
